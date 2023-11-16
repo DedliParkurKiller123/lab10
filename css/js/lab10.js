@@ -164,9 +164,9 @@ function clearRules(){
 }
 
 let clickCount = 0;
-const cells1 = document.querySelector('#cells1');
-const cells2 = document.querySelector('#cells2');
-const cells3 = document.querySelector('#cells3');
+const cell1 = document.querySelector('#cell1');
+const cell2 = document.querySelector('#cell2');
+const cell3 = document.querySelector('#cell3');
 const button = document.querySelector('#button');
 
 button.onclick = () => {
@@ -178,16 +178,16 @@ button.onclick = () => {
             './img/cherry-removebg-preview.png'
         ];
         const randomImages = getRandomImages(images);
-        cells1.innerHTML = randomImages[0].map(image => `<img alt="${getAlt(image)}" src="${image}">`).join('');
-        cells2.innerHTML = randomImages[1].map(image => `<img alt="${getAlt(image)}" src="${image}">`).join('');
-        cells3.innerHTML = randomImages[2].map(image => `<img alt="${getAlt(image)}" src="${image}">`).join('');
+        cell1.innerHTML = randomImages[0].map(image => `<img alt="${getAlt(image)}" src="${image}">`).join('');
+        cell2.innerHTML = randomImages[1].map(image => `<img alt="${getAlt(image)}" src="${image}">`).join('');
+        cell3.innerHTML = randomImages[2].map(image => `<img alt="${getAlt(image)}" src="${image}">`).join('');
         const middleRowImages = [
-            cells1.children[1].getAttribute('src'), 
-            cells2.children[1].getAttribute('src'), 
-            cells3.children[1].getAttribute('src')  
+            cell1.children[1].getAttribute('src'), 
+            cell2.children[1].getAttribute('src'), 
+            cell3.children[1].getAttribute('src')  
     ];
 
-    if (middleRowImages.every((image, index, arr) => image === arr[0])) {
+    if (middleRowImages.every(image => image === middleRowImages[0])) {
         gameResult('Ви перемогли!!!', 'rgba(0, 255, 0, 0.4)');
     }
     }
