@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гра "Однорукий бандит !"</title>
+    <link rel="stylesheet" href="./css/lab10.css">
+    <link rel="icon" href="./img/FNV_One_Armed_Bandit.webp">
+    <script src="./css/js/lab10.js" defer></script>
+</head>
+<body>
+    <div id="window">
+        <input type="text" id="name-for-user" placeholder="Введіть своє ім'я...">
+        <input type="button" id="save-name" value="Зберегти">
+    </div>
+    <div id="error-window"></div>
+    <div id="window-win"></div>
+    <div id="rules">
+        У Вас є 3 спроби , щоб перемогти в грі.<br>Якщо Ви не зможете перемогти за 3 спроби, то ви побачите повідомлення, яке повідомить Вам про програш.<br>Щасти!
+    </div>
+    <div id="form">
+        <div id="window-for-cells">
+        <div id="cells1" class="cells">
+            <img alt="bell1" src="./img/bell-removebg-preview.png">
+            <img alt="seven1" src="./img/seven-removebg.png">
+            <img alt="cherry1" src="./img/cherry-removebg-preview.png">
+        </div>
+        <div id="cells2" class="cells">
+            <img alt="seven2" src="./img/seven-removebg.png">
+            <img alt="bell2" src="./img/bell-removebg-preview.png">
+            <img alt="cherry2" src="./img/cherry-removebg-preview.png">
+        </div>
+        <div id="cells3" class="cells">
+            <img alt="bell3" src="./img/bell-removebg-preview.png">
+            <img alt="cherry3" src="./img/cherry-removebg-preview.png">
+            <img alt="seven3" src="./img/seven-removebg.png">
+        </div>
+        </div>
+        <input id="button" type="button" value="Зіграти!">
+        <div id="info"></div>
+    </div>
+</body>
+</html>
