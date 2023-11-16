@@ -168,30 +168,28 @@ const cell1 = document.querySelector('#cell1');
 const cell2 = document.querySelector('#cell2');
 const cell3 = document.querySelector('#cell3');
 const button = document.querySelector('#button');
+const images = [
+    './img/bell-removebg-preview.png',
+    './img/seven-removebg.png',
+    './img/cherry-removebg-preview.png'
+];
 
 button.onclick = () => {
-        if (clickCount < 3) {
-            clickCount++;
-        const images = [
-            './img/bell-removebg-preview.png',
-            './img/seven-removebg.png',
-            './img/cherry-removebg-preview.png'
-        ];
-        const randomImages = getRandomImages(images);
-        cell1.innerHTML = randomImages[0].map(image => `<img alt="${getAlt(image)}" src="${image}">`).join('');
-        cell2.innerHTML = randomImages[1].map(image => `<img alt="${getAlt(image)}" src="${image}">`).join('');
-        cell3.innerHTML = randomImages[2].map(image => `<img alt="${getAlt(image)}" src="${image}">`).join('');
-        const middleRowImages = [
-            cell1.children[1].getAttribute('src'), 
-            cell2.children[1].getAttribute('src'), 
-            cell3.children[1].getAttribute('src')  
+    if (clickCount < 3) {
+    clickCount++;
+    const randomImages = getRandomImages(images);
+    cell1.innerHTML = randomImages[0].map(image => `<img alt="${getAlt(image)}" src="${image}">`).join('');
+    cell2.innerHTML = randomImages[1].map(image => `<img alt="${getAlt(image)}" src="${image}">`).join('');
+    cell3.innerHTML = randomImages[2].map(image => `<img alt="${getAlt(image)}" src="${image}">`).join('');
+    const middleRowImages = [
+        cell1.children[1].getAttribute('src'), 
+        cell2.children[1].getAttribute('src'), 
+        cell3.children[1].getAttribute('src')  
     ];
-
     if (middleRowImages.every(image => image === middleRowImages[0])) {
         gameResult('Ви перемогли!!!', 'rgba(0, 255, 0, 0.4)');
     }
     }
-
     if (clickCount === 3) {
         gameResult('Ви програли :(', 'rgba(255, 0, 0, 0.4)');
     }
