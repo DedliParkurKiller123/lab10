@@ -1,0 +1,179 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow: hidden;
+    animation: back 6s ease-in-out infinite;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+#form{
+    background-color: rgba(255, 255, 255, 0.418);
+    box-shadow: 0.3vw 0.3vw 0.3vw rgba(0, 0, 0, 0.774);
+    transition: 1s;
+    width: 40vw;
+    height: 85vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1%;
+}
+
+#window-for-cells{
+    width: 95%;
+    height: 65%;
+    position: absolute;
+    top: 39%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+}
+
+#window-for-cells > div.cells{
+    transition: 1s;
+    background-color: rgba(0, 0, 0, 0.322);
+    border: 0.1vw solid rgba(0, 0, 0, 0.527);
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cells1, #cells2, #cells3 {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cells1 > img,#cells2 > img,#cells3 > img{
+    width: 100%;
+    height: 100%;
+}
+
+#button{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14vw;
+    height: 7vh;
+    border-radius: 0%;
+    transition: 1s, width 0.1s, height 0.1s;
+    background-color: rgba(0, 0, 0, 0.322);
+    border: 0.1vw solid rgba(0, 0, 0, 0.527);
+    font-size: 2vh;
+    color: rgba(0, 0, 0, 0.719);
+}
+
+#info {
+    position: absolute;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s;
+    width: 20vw;
+    height: 7vh;
+    background-color: rgba(0, 0, 0, 0.322);
+    border: 0.1vw solid rgba(0, 0, 0, 0.527);
+    font-size: 2.5vh;
+    color: rgba(0, 0, 0, 0.719);
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+#form:hover {
+    background-color: rgba(255, 255, 255, 0.116);
+    box-shadow: 0.6vw 0.6vw 0.6vw rgba(0, 0, 0, 0.438);
+    width: 45vw;
+    height: 90vh;
+}
+
+#form:hover #window-for-cells > div.cells{
+    background-color: rgba(0, 0, 0, 0.144);
+    border: 0.1vw solid rgba(0, 0, 0, 0.247);
+    box-shadow: 0.6vw 0.6vw 0.6vw rgba(0, 0, 0, 0.438);
+}
+
+#button:active{
+    width: 15vw;
+    height: 8vh;
+}
+
+#form:hover #button ,#form:hover #info{
+    background-color: rgba(0, 0, 0, 0.144);
+    border: 0.1vw solid rgba(0, 0, 0, 0.247);
+    box-shadow: 0.6vw 0.6vw 0.6vw rgba(0, 0, 0, 0.438);
+}
+
+
+@keyframes back {
+    0% {
+        background: linear-gradient(125deg ,
+        #f76464,
+        #dc56fd, 
+        #60b2ff,
+        #78f7ec,
+        #ff70b8);
+    }
+    20%{
+        background: linear-gradient(125deg ,
+        #ff70b8,
+        #f76464,
+        #dc56fd, 
+        #60b2ff,
+        #78f7ec);
+    }
+    40%{
+        background: linear-gradient(125deg ,
+        #78f7ec,
+        #ff0080,
+        #f76464,
+        #dc56fd, 
+        #60b2ff);
+    }
+    60%{
+        background: linear-gradient(125deg ,
+        #60b2ff,
+        #78f7ec,
+        #ff70b8,
+        #f76464,
+        #dc56fd);
+    }
+    80%{
+        background: linear-gradient(125deg ,
+        #dc56fd,
+        #60b2ff,
+        #78f7ec,
+        #ff70b8,
+        #f76464);
+    }
+    100%{
+        background: linear-gradient(125deg ,
+        #f76464,
+        #dc56fd,
+        #60b2ff,
+        #78f7ec,
+        #ff70b8);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #form {
+        width: 70vw;
+    }
+
+    #form:hover {
+        width: 75vw;
+    }
+}
