@@ -219,13 +219,16 @@ function getAlt(index) {
 }
 
 function getRandomImages(images) {
-    const randomImages = Array.from({ length: 3 }, () => {
-        const column = new Set();
-        while (column.size < 3) {
+    const randomImages = [];
+    for (let i = 0; i < 3; i++) {
+        const column = [];
+        while (column.length < 3) {
             const randomImage = images[Math.floor(Math.random() * images.length)];
-            column.add(randomImage);
+            if (!column.includes(randomImage)) {
+                column.push(randomImage);
+            }
         }
-        return Array.from(column);
-    });
+        randomImages.push(column);
+    }
     return randomImages;
 }
