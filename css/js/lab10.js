@@ -178,9 +178,9 @@ button.onclick = () => {
             './img/cherry-removebg-preview.png'
         ];
         const randomImages = getRandomImages(images);
-        cells1.innerHTML = randomImages[0].map(image => `<img src="${image}">`).join('');
-        cells2.innerHTML = randomImages[1].map(image => `<img src="${image}">`).join('');
-        cells3.innerHTML = randomImages[2].map(image => `<img src="${image}">`).join('');
+        cells1.innerHTML = randomImages[0].map(image => `<img alt="${getAlt(image)}" src="${image}">`).join('');
+        cells2.innerHTML = randomImages[1].map(image => `<img alt="${getAlt(image)}" src="${image}">`).join('');
+        cells3.innerHTML = randomImages[2].map(image => `<img alt="${getAlt(image)}" src="${image}">`).join('');
         const middleRowImages = [
             cells1.children[1].getAttribute('src'), 
             cells2.children[1].getAttribute('src'), 
@@ -207,6 +207,15 @@ function gameResult(message, bgColor) {
         winWin.style.opacity = 0;
     }, 2000);
     clickCount = 0;
+}
+
+function getAlt(index) {
+    const altForImg = {
+        './img/bell-removebg-preview.png': 'bell',
+        './img/seven-removebg.png': 'seven',
+        './img/cherry-removebg-preview.png': 'cherry',
+    };
+    return altForImg[index];
 }
 
 function getRandomImages(images) {
