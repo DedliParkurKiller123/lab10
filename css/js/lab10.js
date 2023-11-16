@@ -20,19 +20,6 @@ const winWin = document.querySelector('#window-win');
     winWin.style.justifyContent = 'center'; 
     winWin.style.alignItems = 'center';
 
-const windowInput = document.querySelector('#window');
-    windowInput.style.opacity = 1;
-    windowInput.style.position = 'absolute';
-    windowInput.style.top='50%';
-    windowInput.style.left = '50%';
-    windowInput.style.transform = 'translate(-50%, -50%)';
-    windowInput.style.zIndex = '1';
-    windowInput.style.width = '25%';
-    windowInput.style.height = '35%';
-    windowInput.style.border = '2px solid rgba(0, 0, 0, 1)';
-    windowInput.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
-    windowInput.style.boxShadow = '1px 5px 20px 10px rgba(0, 0, 0, 0.8)';
-
 const rulesWindow = document.querySelector('#rules');
     rulesWindow.style.opacity = 0;
     rulesWindow.style.position = 'absolute';
@@ -52,6 +39,19 @@ const rulesWindow = document.querySelector('#rules');
     rulesWindow.style.color = 'rgba(255, 255, 255, 0.418)';
     rulesWindow.style.transition = '0.5s';
 
+const windowInput = document.querySelector('#window');
+    windowInput.style.opacity = 1;
+    windowInput.style.position = 'absolute';
+    windowInput.style.top='50%';
+    windowInput.style.left = '50%';
+    windowInput.style.transform = 'translate(-50%, -50%)';
+    windowInput.style.zIndex = '1';
+    windowInput.style.width = '25%';
+    windowInput.style.height = '35%';
+    windowInput.style.border = '2px solid rgba(0, 0, 0, 1)';
+    windowInput.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
+    windowInput.style.boxShadow = '1px 5px 20px 10px rgba(0, 0, 0, 0.8)';
+
 const userNameWindow = document.querySelector('#name-for-user');
     userNameWindow.style.position = 'absolute';
     userNameWindow.style.top='35%';
@@ -61,7 +61,7 @@ const userNameWindow = document.querySelector('#name-for-user');
     userNameWindow.style.width = '50%';
     userNameWindow.style.border = '2px solid rgba(0, 0, 0, 1)';
     userNameWindow.style.textAlign = 'center';
-    userNameWindow.style.fontSize = '1.5vw';
+    userNameWindow.style.fontSize = '1.2vw';
     userNameWindow.style.backgroundColor = 'rgba(0,0,0,0.7)';
     userNameWindow.style.color = '#ffffff';
     userNameWindow.style.transition = '0.3s';
@@ -71,12 +71,12 @@ userNameWindow.addEventListener('mouseenter', ()=>{
         userNameWindow.style.color = '#000000';
         userNameWindow.style.width = '60%';
         userNameWindow.style.height='20%';
-        userNameWindow.style.fontSize = '1.8vw';
+        userNameWindow.style.fontSize = '1.4vw';
     });
 userNameWindow.addEventListener('mouseout', ()=>{
         userNameWindow.style.backgroundColor='rgba(0, 0, 0, 0.6)';
         userNameWindow.style.color = '#ffffff';
-        userNameWindow.style.fontSize = '1.5vw';
+        userNameWindow.style.fontSize = '1.2vw';
         userNameWindow.style.height = '15%';
         userNameWindow.style.width = '50%';
     });
