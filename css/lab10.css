@@ -57,7 +57,7 @@ body{
 
 #cell1 > img,#cell2 > img,#cell3 > img{
     width: 100%;
-    height: 100%;
+    height: 30%;
 }
 
 #button{
